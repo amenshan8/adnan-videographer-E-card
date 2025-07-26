@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function createFloatingEmojis() {
     const container = document.querySelector('.floating-emoji-container');
     const emojis = ['🎥', '📸', '🎬', '📽️', '📷', '🎞️', '🎭'];
-    const numEmojis = 60; // Balanced number for smooth effect
+    const numEmojis = 35; // Reduced number for better performance, within original requested range
     
     for (let i = 0; i < numEmojis; i++) {
         const emoji = document.createElement('div');
@@ -75,17 +75,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             target.scrollIntoView({ behavior: 'smooth' });
         }
     });
-});
-
-// Add subtle parallax effect on scroll
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const profileSection = document.querySelector('.profile-section');
-    const rate = scrolled * -0.5;
-    
-    if (profileSection) {
-        profileSection.style.transform = `translateY(${rate}px)`;
-    }
 });
 
 // Generate vCard file dynamically
