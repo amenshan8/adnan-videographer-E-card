@@ -86,7 +86,7 @@ TITLE:Videographer | Photographer | Social Media Marketer
 ORG:Adnan Kousa Media
 TEL:+31638724909
 EMAIL:adnankousa24@gmail.com
-URL:https://adnan-kousa-videographer-social-media-marketer-2--nimathor.on.websim.com/
+URL:https://amenshan8.github.io/AdnanVID-MARKTER.V112/
 NOTE:Capturing the moment. Crafting the brand.
 END:VCARD`;
 
