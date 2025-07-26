@@ -360,7 +360,6 @@ body {
     border: none;
     border-radius: 50px;
     color: #ffffff;
-    text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
     box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
@@ -425,6 +424,7 @@ body {
     animation: floatUp var(--duration) linear infinite;
     animation-delay: var(--delay);
     transform: translateY(100vh) scale(var(--scale));
+    will-change: transform, opacity; /* Hint to browser for performance optimization */
 }
 
 @keyframes floatUp {
