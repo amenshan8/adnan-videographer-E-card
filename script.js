@@ -82,7 +82,7 @@ function generateVCard() {
     const vcard = `BEGIN:VCARD
 VERSION:3.0
 FN:Adnan Kousa
-TITLE:Videographer | Photographer | Social Media Marketer
+TITLE:Videographer | Social Media Marketer
 ORG:Adnan Kousa Media
 TEL:+31638724909
 EMAIL:adnankousa24@gmail.com
