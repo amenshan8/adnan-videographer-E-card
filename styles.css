@@ -1,4 +1,3 @@
-
 /* Reset and base styles */
 * {
     margin: 0;
@@ -424,24 +423,30 @@ body {
     opacity: 0;
     animation: floatUp var(--duration) linear infinite;
     animation-delay: var(--delay);
-    transform: translateY(100vh) scale(var(--scale));
+    /* The 0% keyframe will define the starting transform now */
     will-change: transform, opacity; /* Hint to browser for performance optimization */
 }
 
 @keyframes floatUp {
     0% {
+        /* Start above the screen, invisible */
         opacity: 0;
-        transform: translateY(100vh) scale(var(--scale)) rotate(var(--start-rotation));
+        transform: translateY(-100px) scale(var(--scale)) rotate(var(--start-rotation));
     }
-    10% {
+    5% {
+        /* Quickly appear at the top edge of the screen, fully visible */
         opacity: var(--opacity);
+        transform: translateY(0) scale(var(--scale)) rotate(var(--start-rotation));
     }
-    90% {
+    95% {
+        /* Drift down to the bottom edge of the screen, still visible */
         opacity: var(--opacity);
+        transform: translateY(100vh) scale(var(--scale)) rotate(var(--end-rotation));
     }
     100% {
+        /* Move off screen at the very bottom, invisible */
         opacity: 0;
-        transform: translateY(-100px) scale(var(--scale)) rotate(var(--end-rotation));
+        transform: translateY(calc(100vh + 50px)) scale(var(--scale)) rotate(var(--end-rotation));
     }
 }
 
